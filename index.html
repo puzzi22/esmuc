@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400&family=Raleway:ital,wght@0,300;0,400;0,600;0,800;1,300&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Auditió de la classe de trompa natural de l'ESMUC</title>
+	</head>
+	<body>
+		<main>
+			<div class="container container-mobile">
+				<section class="featured">
+					<h1 class="title">
+						Auditió de la classe de trompa natural de l'ESMUC
+					</h1>
+					<h2 class="date">19 de març 2024, a la 1, aula 207</h2>
+					<p class="featured-artists">
+						Josep Fenollosa Benavent, Sandra Ramon, Eduardo Aparicio Mínguez i
+						Santiago Pla
+					</p>
+					<p class="invited-artists">
+						<span>Pianista de la classe:</span> Tomoko Matsuoka
+					</p>
+					<p class="invited-artists">
+						<span>Professor:</span> Pierre-Antoine Tremblay
+					</p>
+					<!-- <p class="studio">Classe de Pierre-Antoine Tremblay</p> -->
+				</section>
+			</div>
+		</main>
+		<div id="webslides">
+			<section class="prestation">
+				<div class="composer">Camille <span>Saint-Saëns</span></div>
+				<div class="dates">1835-1921</div>
+				<div class="work">
+					Romance en <em>fa</em> major per a trompa i piano, op. 36
+					<span class="dates">(1874)</span>
+				</div>
+				<div class="musicians">
+					Pierre-Antoine Tremblay, trompa natural<br />
+					Tomoko Matsuoka, pianoforte
+				</div>
+			</section>
+
+			<section class="prestation">
+				<div class="composer">Nikolaus von <span>Krufft</span></div>
+				<div class="dates">1779-1818</div>
+				<div class="work">
+					Sonata per a pianoforte amb acompanyament obligat de trompa en
+					<em>mi</em> major <span class="dates">(p. 1814)</span>
+				</div>
+				<div class="movement">I. Allegro moderato</div>
+				<div class="movement">II. Andante espressivo</div>
+				<div class="movement">III. Rondo alla polacca. Moderato</div>
+				<div class="musicians">
+					Santiago Pla, trompa natural<br />
+					Tomoko Matsuoka, pianoforte
+				</div>
+			</section>
+
+			<section class="prestation">
+				<div class="composer">Ludwig van <span>Beethoven</span></div>
+				<div class="dates">1770-1827</div>
+				<div class="work">
+					Sonata per a trompa i piano en <em>fa</em> major, op. 17
+					<span class="dates">(1800)</span>
+				</div>
+				<div class="movement">I. Allegro moderato</div>
+				<div class="movement">II. Poco Adagio, quasi Andante</div>
+				<div class="movement">III. Rondo. Allegro moderato</div>
+				<div class="musicians">
+					Sandra Ramon, trompa natural<br />
+					Tomoko Matsuoka, pianoforte
+				</div>
+			</section>
+
+			<section class="prestation">
+				<div class="composer">Wolfgang Amadeus <span>Mozart</span></div>
+				<div class="dates">1756-1791</div>
+				<div class="work">
+					Concert per a trompa en <em>re</em> major, K. 412 (386b)
+					<span class="dates">(1791)</span>
+				</div>
+				<div class="movement">I. Allegro</div>
+				<div class="movement">II. Rondò. Adagio [Allegro]</div>
+				<div class="musicians">
+					Eduardo Aparicio Mínguez, trompa natural<br />
+					Tomoko Matsuoka, pianoforte
+				</div>
+			</section>
+
+			<section class="prestation">
+				<div class="composer">Hermann <span>Baumann</span></div>
+				<div class="dates">1934-2023</div>
+				<div class="work">
+					Elegia per a trompa natural
+					<span class="dates">(1984)</span>
+				</div>
+				<div class="musicians">
+					Josep Fenollosa Benavent, trompa natural<br />
+				</div>
+			</section>
+
+			<section class="prestation">
+				<div class="composer">Wolfgang Amadeus <span>Mozart</span></div>
+				<div class="dates">1756-1791</div>
+				<div class="work">
+					Concert per a trompa en <em>mi</em> bemoll major, K. 417
+					<span class="dates">(1783)</span>
+				</div>
+				<div class="movement">I. [Allegro]</div>
+				<div class="movement">II. [Andante]</div>
+				<div class="movement">III. [Rondo. Allegro]</div>
+				<div class="musicians">
+					Josep Fenollosa Benavent, trompa natural<br />
+					Tomoko Matsuoka, pianoforte
+				</div>
+			</section>
+		</div>
+	</body>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const sections = document.querySelectorAll(".prestation");
+
+			function slideInOnScroll() {
+				const scrollY = window.scrollY + window.innerHeight;
+
+				sections.forEach((section) => {
+					const sectionTop = section.offsetTop;
+					const isHalfShown = scrollY > sectionTop + section.offsetHeight / 2;
+
+					if (isHalfShown) {
+						section.classList.add("slide-in");
+					}
+				});
+			}
+
+			window.addEventListener("scroll", slideInOnScroll);
+		});
+	</script>
+</html>
